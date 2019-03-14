@@ -1,29 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- Smart SEO :)-->
-    <meta name="description" content="Welkom op Calvijn.tk! Op deze site kun je gemakkelijk je rooster bekijken op telefoon en computer.">
-    <meta name="keywords" content="Cupweb, Rooster, Calvijn College, Calvijn Rooster, calvijn, calvijn rooster, calvijn.tk, calvijn tk">
+    <meta name="description"
+        content="Welkom op Calvijn.tk! Op deze site kun je gemakkelijk je rooster bekijken op telefoon en computer.">
+    <meta name="keywords"
+        content="Cupweb, Rooster, Calvijn College, Calvijn Rooster, calvijn, calvijn rooster, calvijn.tk, calvijn tk">
     <title>Calvijn Rooster</title>
     <!-- Includes -->
-    <link rel="stylesheet" type="text/css" media="screen" href="materialize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/materialize.css" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="jquery-3.3.1.min.js"></script>
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/materialize.js"></script>
     <script src="script.js"></script>
 </head>
 
 <body>
-    Hello World!
+    <!-- Dropdown navbar -->
+    <ul id="ddMenu" class="dropdown-content">
+        <li><a href="#!">one</a></li>
+        <li><a href="#!">two</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">three</a></li>
+    </ul>
+    <nav class="nav-extended">
+        <!-- Navbar -->
+        <div class="nav-wrapper red" id="navbar">
+            <a class="brand-logo"><b>&nbsp;Calvijn.tk</b> bèta</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://calvijn.magister.net" target="_blank"><b>Magister</b></a></li>
+                <li><a href="http://portaal.edu.calvijncollege.nl/" target="_blank"><b>Eduportaal</b></a></li>
+                <li><a href="https://ccis.calvijncollege.nl/" target="_blank"><b>CCIS</b></a></li>
+                <li><a href="https://www.office.com/?auth=2&home=1" target="_blank">Office 365</a></li>
+                <li><a href="https://www.calvijncollege.nl/" target="_blank">Calvijn website</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" data-target="ddMenu"><i class="material-icons right">more_vert</i></a></li>
+            </ul>
+        </div>
+        <!-- Tabs -->
+        <div class="nav-content red" id="tabs">
+            <ul class="tabs tabs-transparent">
+              <li class="tab"><a class="active" href="#rooster"><b>Rooster</b></a></li>
+              <li class="tab"><a href="#cup"><b>Cupweb</b></a></li>
+              <li class="tab"><a href="#overige"><b>Overige</b></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Tab pages-->
+    <div id="rooster" class="col s12">
+        <iframe src="https://calvijncollege.zportal.nl/api/v2/oauth" id="frmzermelo" style="border: 0; width: 100%; height: 1000px">Uw
+        browser ondersteund een functie niet uit Calvijn.tk<br>Gebruik een andere browser.</iframe>
+    </div>
+
+    <div id="cup" class="col s12">
+        <iframe src="https://ccgobb.cupweb6.nl" style="border: 0; width: 100%; height: 1000px">Uw
+        browser ondersteund een functie niet uit Calvijn.tk<br>Gebruik een andere browser.</iframe>
+    </div>
+
+    <div id="overige" class="col s12">
+        Hello World!
+    </div>
+
 </body>
 
-<script src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript" src="materialize.js"></script>
+<script src="lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="lib/materialize.js"></script>
 <script type="text/javascript">
     $(document).ready(function () {
-      
+        $(".dropdown-trigger").dropdown();
+        $('.tabs').tabs();
     });
 </script>
 

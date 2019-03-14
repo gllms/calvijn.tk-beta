@@ -1,3 +1,9 @@
+//Code
+
+
+
+
+//Veriables
 //Vrije dagen en vakanties
 let vd1819 = [
     {
