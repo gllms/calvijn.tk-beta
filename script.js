@@ -10,10 +10,6 @@ let vd1819 = [
     },
     {
         title: "Tweede Paasdag",
-        date: "26-03-2019",
-    },
-    {
-        title: "Tweede Paasdag",
         date: "22-04-2019",
     },
     {
@@ -27,7 +23,7 @@ let vd1819 = [
     },
     {
         title: "Vrije dag",
-        date: "03-05-2019",
+        date: "31-05-2019",
     },
     {
         title: "Tweede Pinksterdag",
