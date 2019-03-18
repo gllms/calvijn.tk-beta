@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <title>Extra</title>
+    <!-- Includes -->
+    <link rel="stylesheet" type="text/css" media="screen" href="lib/materialize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="lib/jquery-3.3.1.min.js"></script>
+    <script src="lib/materialize.js"></script>
+    <script src="lib/moment.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body class="white-text grey darken-4">
+    <!-- Dropdown navbar -->
+    <ul id="ddMenu" class="dropdown-content white-text grey darken-4">
+        <li><a href="index.html">Home</a></li>
+        <li class="divider"></li>
+        <li class="active"><a href="#">Extra</a></li>
+    </ul>
+    <nav class="nav-extended">
+        <!-- Navbar -->
+        <div class="nav-wrapper red" id="navbar">
+            <a class="brand-logo"><b>&nbsp;Calvijn.tk</b> bèta</a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://calvijn.magister.net" target="_blank"><b>Magister</b></a></li>
+                <li><a href="http://portaal.edu.calvijncollege.nl/" target="_blank"><b>Eduportaal</b></a></li>
+                <li><a href="https://ccis.calvijncollege.nl/" target="_blank"><b>CCIS</b></a></li>
+                <li><a href="https://www.office.com/?auth=2&home=1" target="_blank">Office 365</a></li>
+                <li><a href="https://www.calvijncollege.nl/" target="_blank">Calvijn website</a></li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-trigger" data-target="ddMenu"><i class="material-icons right">more_vert</i></a>
+                </li>
+            </ul>
+        </div>
+        <!-- Add tabs -->
+    </nav>
+
+        <!-- Add games, info e.d -->
+
+</body>
+
+<script src="lib/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="lib/materialize.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".dropdown-trigger").dropdown();
+        $('.tabs').tabs();
+        $('.collapsible').collapsible();
+    });
+</script>
+</html>

@@ -1,7 +1,7 @@
 // Vrije dagen en vakanties
 let vd1819 = [
     {
-        title: "Rapportenvergadering",
+        title: "Rapportenvergadering Appelstraat",
         date: "26-03-2019",
     },
     {
