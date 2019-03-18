@@ -1,10 +1,4 @@
-//Code
-
-
-
-
-//Veriables
-//Vrije dagen en vakanties
+// Vrije dagen en vakanties
 let vd1819 = [
     {
         title: "Rapportenvergadering",
@@ -125,3 +119,24 @@ let vd1920 = [
     },
 ];
 
+
+// als de body is geladen
+$(function () {
+    vulTabel($("#data1819"), vd1819);
+    vulTabel($("#data1920"), vd1920);
+});
+
+function vulTabel(el, data) {
+    // loop door elk element in de array
+    data.forEach(function (e) {
+        if (e.date) { // als er een datum is
+            if (moment(e.date, "DD-MM-YYYY").isSameOrAfter(moment().subtract(1, "days"))) { // als het nog niet gebeurd is
+                el.append(`<tr><td>${e.title}</td><td>${e.date}</td></tr>`);
+            }
+        } else { // als er een from en een until is
+            if (moment(e.from, "DD-MM-YYYY").isSameOrAfter(moment().subtract(1, "days"))) { // als het nog niet gebeurd is
+                el.append(`<tr><td>${e.title}</td><td>${e.from} t/m ${e.until}</td></tr>`);
+            }
+        }
+    });
+}
