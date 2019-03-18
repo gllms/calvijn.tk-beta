@@ -118,6 +118,7 @@ let vd1920 = [
 
 // als de body is geladen
 $(function () {
+    moment.locale('nl');
     vulTabel($("#data1819"), vd1819);
     vulTabel($("#data1920"), vd1920);
 });
@@ -127,11 +128,11 @@ function vulTabel(el, data) {
     data.forEach(function (e) {
         if (e.date) { // als er een datum is
             if (moment(e.date, "DD-MM-YYYY").isSameOrAfter(moment().subtract(1, "days"))) { // als het nog niet gebeurd is
-                el.append(`<tr><td>${e.title}</td><td>${e.date}</td></tr>`);
+                el.append(`<tr><td>${e.title}</td><td>${moment(e.date, "DD-MM-YYYY").format('dddd')+" "+e.date}</td></tr>`);
             }
         } else { // als er een from en een until is
             if (moment(e.from, "DD-MM-YYYY").isSameOrAfter(moment().subtract(1, "days"))) { // als het nog niet gebeurd is
-                el.append(`<tr><td>${e.title}</td><td>${e.from} t/m ${e.until}</td></tr>`);
+                el.append(`<tr><td>${e.title}</td><td>${moment(e.from, "DD-MM-YYYY").format('dddd')+" "+e.from} t/m ${moment(e.until, "DD-MM-YYYY").format('dddd')+" "+e.until}</td></tr>`);
             }
         }
     });
